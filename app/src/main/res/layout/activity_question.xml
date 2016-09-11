@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/q_num"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/view_pager" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Anterior"
+            android:drawableLeft="@drawable/ic_arrow_left"
+            style="@style/button"
+            android:id="@+id/previous_bt"
+            android:onClick="changePage" />
+
+        <Button
+            android:text="Siguiente"
+            android:drawableRight="@drawable/ic_arrow_right"
+            style="@style/button"
+            android:id="@+id/next_bt"
+            android:onClick="changePage" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver resultados"
+        android:id="@+id/results_bt"
+        android:onClick="onViewResults"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
